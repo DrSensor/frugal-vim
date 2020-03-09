@@ -28,4 +28,13 @@ if dein#tap('vim-gitgutter')
 	nmap <silent> [c :call PrevHunkAllBuffers()<CR>
 endif
 
+if dein#tap('vim-lsc')
+	let g:lsc_auto_map = {
+		\ 'defaults': v:true,
+ 		\ 'GoToDefinition': 'gd',
+ 		\ 'GoToDefinitionSplit': 'gD',
+ 		\ 'Rename': '<F2>',
+ 		\ 'FindCodeActions': '<F5>',
+		\ }
+endif
 " vim: set foldmethod=indent ts=2 sw=2 tw=80 noet :

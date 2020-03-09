@@ -1,4 +1,5 @@
 if dein#tap('lightline.vim')
+	set laststatus=2
 	let g:lightline = {
 		\ 'component_function': {
 		\ 	'gitbranch': 'gitbranch#name',
