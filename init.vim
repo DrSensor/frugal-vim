@@ -12,11 +12,8 @@ set splitright 	" :vsplit will add window in right
 set number
 set relativenumber
 set numberwidth=2
-highlight LineNr ctermbg=NONE guibg=NONE guifg=YellowGreen
 
 set cursorline
-highlight CursorLine cterm=NONE
-highlight CursorLineNr cterm=bold
 
 " Plugin Manager {{{
 " ------------------
@@ -40,18 +37,18 @@ if dein#load_state('~/.cache/dein')
 	call dein#add('ajh17/VimCompletesMe')
 	call dein#add('liuchengxu/vista.vim')
 
-	call dein#add('itchyny/vim-cursorword')
+	"call dein#add('itchyny/vim-cursorword')
 	call dein#add('t9md/vim-quickhl')
 	call dein#add('tpope/vim-commentary')
-	call dein#add('tpope/surround.vim')
+	call dein#add('tpope/vim-surround')
 	call dein#add('rhysd/git-messenger.vim')
 	"------------=}}}"
 	
 	"Offices {{{
 	call dein#add('gelisam/git-slides')
 	call dein#add('vimwiki/vimwiki')
-	call dein#add('junegunn/goyo')
-	call dein#add('junegunn/limelight')
+	call dein#add('junegunn/goyo.vim')
+	call dein#add('junegunn/limelight.vim')
 	"--------}}}
 
 	"Asthetics {{{"
@@ -86,9 +83,10 @@ call dein#call_hook('source')
 call dein#call_hook('post_source')
 "------------------}}}
 
-source .vim/terminal.vim
-source .vim/mappings.vim
-source .vim/filetype.vim
-source .vim/plugins/all.vim
+source ~/.vim/plugins/all.vim
+source ~/.vim/terminal.vim
+source ~/.vim/filetype.vim
+source ~/.vim/mappings.vim
+source ~/.vim/commands.vim
 
 " vim: set foldmethod=marker ts=2 sw=2 tw=80 noet :

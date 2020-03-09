@@ -21,3 +21,11 @@ inoremap [ []<left>
 inoremap { {}<left>
 inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
+
+if dein#tap('vim-gitgutter')
+	nmap <silent> <Leader>x :set opfunc=CleanUp<CR>g@
+	nmap <silent> ]c :call NextHunkAllBuffers()<CR>
+	nmap <silent> [c :call PrevHunkAllBuffers()<CR>
+endif
+
+" vim: set foldmethod=indent ts=2 sw=2 tw=80 noet :
