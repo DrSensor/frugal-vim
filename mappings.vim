@@ -37,4 +37,10 @@ if dein#tap('vim-lsc')
  		\ 'FindCodeActions': '<F5>',
 		\ }
 endif
+
+if dein#tap('vim-cursorword')
+	let cursorword = 0
+	let b:cursorword = cursorword
+	nmap <silent> <Leader>lc :let b:cursorword = b:cursorword ? 0 : 1<CR>
+endif
 " vim: set foldmethod=indent ts=2 sw=2 tw=80 noet :
