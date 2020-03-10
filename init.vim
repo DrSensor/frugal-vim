@@ -17,13 +17,15 @@ set cursorline
 
 " Plugin Manager {{{
 " ------------------
-set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
+let deinpath#root = '~/.cache/dein'
+let deinpath#script = deinpath#root.'/repos/github.com/Shougo/dein.vim'
 let g:dein#auto_recache = 1
 let g:dein#install_max_processes = 12
 
-if dein#load_state('~/.cache/dein')
-	call dein#begin('~/.cache/dein')
-	call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
+let &runtimepath .= ','.deinpath#script
+if dein#load_state(deinpath#root)
+	call dein#begin(deinpath#root)
+	call dein#add(deinpath#script)
 
 	"Productivity {{{"
 	call dein#add('easymotion/vim-easymotion')

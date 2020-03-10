@@ -12,7 +12,7 @@ if dein#tap('context.vim')
 endif
 
 source ~/.vim/plugins/lightline.vim
-source ~/.vim/plugins/gitgutter.vim
+source ~/.vim/plugins/gutter.vim
 source ~/.vim/plugins/language.vim
 
 " vim: set foldmethod=syntax ts=2 sw=2 tw=80 noet :
