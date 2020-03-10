@@ -28,22 +28,23 @@ if dein#load_state(deinpath#root)
 	call dein#add(deinpath#script)
 
 	"Productivity {{{"
-	call dein#add('easymotion/vim-easymotion')
 	call dein#add('lotabout/skim.vim')
+	call dein#add('whiteinge/diffconflicts')
 	call dein#add('wellle/context.vim')
-	call dein#add('haya14busa/vim-asterisk')
+	call dein#add('rhysd/git-messenger.vim')
 
 	call dein#add('Shougo/echodoc.vim')
 	call dein#add('sbdchd/neoformat')
 	call dein#add('natebosch/vim-lsc')
 	call dein#add('ajh17/VimCompletesMe')
 	call dein#add('liuchengxu/vista.vim')
+	call dein#add('editorconfig/editorconfig-vim')
 
-	"call dein#add('itchyny/vim-cursorword')
-	call dein#add('t9md/vim-quickhl')
+	call dein#add('itchyny/vim-cursorword')
+	call dein#add('easymotion/vim-easymotion')
 	call dein#add('tpope/vim-commentary')
 	call dein#add('tpope/vim-surround')
-	call dein#add('rhysd/git-messenger.vim')
+	call dein#add('haya14busa/vim-asterisk')
 	"------------=}}}"
 	
 	"Offices {{{
