@@ -1,6 +1,6 @@
 
 if dein#tap('vim-gitgutter')
-	set updatetime=300
+	set updatetime=100
 	let g:gitgutter_grep = 'rg'
 	let g:gitgutter_sign_allow_clobber = 0
 	"let g:gitgutter_highlight_lines = 1

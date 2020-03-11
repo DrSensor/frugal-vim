@@ -15,7 +15,7 @@ if dein#tap('lightline.vim')
 		\ 				],
 		\ }
  	let g:lightline.inactive = {
-		\ 	'left': [ [ 'modified', 'filename', 'gitbranch' ] ],
+		\ 'left': [ [ 'modified', 'filename', 'gitbranch' ] ],
 		\ }
 
 	" Powerline style

@@ -5,15 +5,10 @@ if filereadable('.vim/.vault.vim')
 	source .vim/.vault.vim 		" Special secure config
 endif
 
-set linebreak 	" stop wrapping lines in the middle of word
-set splitbelow 	" :split will add window in below
-set splitright 	" :vsplit will add window in right
-
-set number
-set relativenumber
+set linebreak cursorline		" Stop wrapping lines in the middle of word and Highlight current line
+set splitbelow splitright 	" change :split or :vsplit to add window at Below or Right
+set number relativenumber 	" use both Relative and Exact line number
 set numberwidth=2
-
-set cursorline
 
 " Plugin Manager {{{
 " ------------------

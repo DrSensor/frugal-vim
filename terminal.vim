@@ -1,7 +1,6 @@
-let &t_ut='' 	" kitty workaround on color theme
+set errorbells 						" Trigger bell on error
 
-set mouse=nv 	" Disable mouse in command-line mode
-set errorbells 	" Trigger bell on error
+set mouse=nv 							" Disable mouse in command-line mode
 if has('mouse')
 	if has('mouse_sgr')
 		set ttymouse=sgr
@@ -10,11 +9,12 @@ if has('mouse')
 	endif
 endif
 
+let &t_ut='' 							" kitty workaround on color theme
 if !has('gui_running')
-  set t_Co=256 				" Enable 256 color terminal
+  set t_Co=256 						" Enable 256 color terminal
 endif
 if has('termguicolors') && $COLORTERM =~# 'truecolor\|24bit'
-	set termguicolors 	" Enables 24-bit RGB color in the TUI
+	set termguicolors 			" Enables 24-bit RGB color in the TUI
 endif
 
 " change cursor shape on different mode
