@@ -11,6 +11,7 @@ if dein#tap('vim-lsc')
 		\ 'javascript': 'typescript-language-server --stdio',
 		\ 'html': 'html-languageserver --stdio',
 		\ 'css': 'css-languageserver --stdio',
+		\ 'sh': 'bash-language-server start',
 		\ 'vim': {
 		\ 	'command': 'vim-language-server --stdio',
 		\ 	'message_hooks': {
