@@ -12,15 +12,15 @@ set numberwidth=2
 
 " Plugin Manager {{{
 " ------------------
-let deinpath#root = '~/.cache/dein'
-let deinpath#script = deinpath#root.'/repos/github.com/Shougo/dein.vim'
+const s:dein_root = '~/.cache/dein'
+const s:dein_script = s:dein_root..'/repos/github.com/Shougo/dein.vim'
 let g:dein#auto_recache = 1
 let g:dein#install_max_processes = 12
 
-let &runtimepath .= ','.deinpath#script
-if dein#load_state(deinpath#root)
-	call dein#begin(deinpath#root)
-	call dein#add(deinpath#script)
+let &runtimepath .= ','..s:dein_script
+if dein#load_state(s:dein_root)
+	call dein#begin(s:dein_root)
+	call dein#add(s:dein_script)
 
 	"Productivity {{{"
 	call dein#add('lotabout/skim.vim')
@@ -84,6 +84,7 @@ call dein#call_hook('post_source')
 source ~/.vim/plugins/all.vim
 source ~/.vim/terminal.vim
 source ~/.vim/filetype.vim
+source ~/.vim/theme.vim
 source ~/.vim/mappings.vim
 source ~/.vim/commands.vim
 

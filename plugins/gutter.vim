@@ -3,18 +3,8 @@ if dein#tap('vim-gitgutter')
 	set updatetime=100
 	let g:gitgutter_grep = 'rg'
 	let g:gitgutter_sign_allow_clobber = 0
-	"let g:gitgutter_highlight_lines = 1
-	let g:gitgutter_highlight_linenrs = 1
 	let g:gitgutter_preview_win_floating = 1
 	let g:gitgutter_use_location_list = 1
-
-	let g:gitgutter_override_sign_column_highlight = 0
-	highlight SignColumn 			ctermbg=NONE guibg=NONE
-	highlight GitGutterAdd 		ctermbg=NONE guibg=NONE
-	highlight GitGutterChange ctermbg=NONE guibg=NONE
-	highlight GitGutterDelete ctermbg=NONE guibg=NONE
-	highlight link GitGutterChangeLine DiffText
-	highlight link GitGutterChangeLineNr Underlined
 
 	function! GitStatus()
 	 	let [a,m,r] = GitGutterGetHunkSummary()
