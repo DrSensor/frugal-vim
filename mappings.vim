@@ -10,7 +10,7 @@ inoremap <C-S> <ESC>:update<CR><right>
 
 " backspace and cursor keys wrap to previous/next line
 set backspace=indent,eol,start whichwrap+=<,>,[,]
-vnoremap <BS> d 
+vnoremap <BS> d
 
 " Auto-close bracket
 " inoremap " ""<left> " conflict with vimscript comment
@@ -30,12 +30,12 @@ endif
 
 if dein#tap('vim-lsc')
 	let g:lsc_auto_map = {
-		\ 'defaults': v:true,
- 		\ 'GoToDefinition': 'gd',
- 		\ 'GoToDefinitionSplit': 'gD',
- 		\ 'Rename': '<F2>',
- 		\ 'FindCodeActions': '<F5>',
-		\ }
+				\ 'defaults': v:true,
+				\ 'GoToDefinition': 'gd',
+				\ 'GoToDefinitionSplit': 'gD',
+				\ 'Rename': '<F2>',
+				\ 'FindCodeActions': '<F5>',
+				\ }
 endif
 
 " vim: set foldmethod=indent ts=2 sw=2 tw=80 noet :

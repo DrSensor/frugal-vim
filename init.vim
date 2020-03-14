@@ -2,12 +2,12 @@ unlet! skip_defaults_vim
 source $VIMRUNTIME/defaults.vim
 
 if filereadable('.vim/.vault.vim')
-	source .vim/.vault.vim 		" Special secure config
+	source .vim/.vault.vim		" Special secure config
 endif
 
 set linebreak cursorline		" Stop wrapping lines in the middle of word and Highlight current line
-set splitbelow splitright 	" change :split or :vsplit to add window at Below or Right
-set number relativenumber 	" use both Relative and Exact line number
+set splitbelow splitright		" change :split or :vsplit to add window at Below or Right
+set number relativenumber		" use both Relative and Exact line number
 set numberwidth=2
 let g:netrw_home='~/.cache/vim'
 
@@ -42,7 +42,7 @@ if dein#load_state(s:dein_root)
 	call dein#add('tpope/vim-surround')
 	call dein#add('haya14busa/vim-asterisk')
 	"------------=}}}"
-	
+
 	"Offices {{{
 	call dein#add('gelisam/git-slides')
 	call dein#add('vimwiki/vimwiki')
@@ -63,10 +63,10 @@ if dein#load_state(s:dein_root)
 	call dein#end()
 
 	if ! g:dein#_is_sudo
-		call dein#save_state() 	" Save cached state for faster startup
+		call dein#save_state()	" Save cached state for faster startup
 	endif
 
-	if dein#check_install() 	" Update or install plugins if a change detected
+	if dein#check_install()		" Update or install plugins if a change detected
 		if ! has('vim')
 			set nomore
 		endif

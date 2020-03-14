@@ -5,27 +5,27 @@ if dein#tap('vim-lsc')
 	" https://github.com/natebosch/vim-lsc/wiki/Language-Servers
 	" and all of them installed via `yay` except vim
 	let g:lsc_server_commands = {
-		\ 'rust': 'rls',
-		\ 'python': 'pyls',
-		\ 'typescript': 'tsserver',
-		\ 'javascript': 'typescript-language-server --stdio',
-		\ 'html': 'html-languageserver --stdio',
-		\ 'css': 'css-languageserver --stdio',
-		\ 'sh': 'bash-language-server start',
-		\ 'vim': {
-		\ 	'command': 'vim-language-server --stdio',
-		\ 	'message_hooks': {
-		\ 		'initialize': {
-		\ 			'initializationOptions': { 'vimruntime': $VIMRUNTIME, 'runtimepath': &rtp },
-		\ 		},
-		\ 	},
-		\ },
-		\ 'go': {
-		\ 	'command': 'gopls serve',
-		\ 	'log_level': -1,
-		\ 	'suppress_stderr': v:true,
-		\ },
-		\ }
+				\ 'rust': 'rls',
+				\ 'python': 'pyls',
+				\ 'typescript': 'tsserver',
+				\ 'javascript': 'typescript-language-server --stdio',
+				\ 'html': 'html-languageserver --stdio',
+				\ 'css': 'css-languageserver --stdio',
+				\ 'sh': 'bash-language-server start',
+				\ 'vim': {
+				\		'command': 'vim-language-server --stdio',
+				\		'message_hooks': {
+				\			'initialize': {
+				\				'initializationOptions': { 'vimruntime': $VIMRUNTIME, 'runtimepath': &rtp },
+				\			},
+				\		},
+				\ },
+				\ 'go': {
+				\		'command': 'gopls serve',
+				\		'log_level': -1,
+				\		'suppress_stderr': v:true,
+				\ },
+				\ }
 
 	" To prevent signcolumn will appear each time Clangd sends a warning or
 	" provides a diagnostic and the text will be shifted by one column each time
@@ -44,20 +44,20 @@ if dein#tap('vim-lsc')
 		let g:dart_analyzer_status = a:params.isAnalyzing
 	endfunction
 	let g:lsc_server_commands.dart = {
-		\ 'command': 'dart /opt/dart-sdk/bin/snapshots/analysis_server.dart.snapshot --lsp',
-		\ 'message_hooks': {
-		\   'initialize': {
-		\     'initializationOptions': {
-		\       'onlyAnalyzeProjectsWithOpenFiles': v:true
-		\     },
-		\   },
-		\   'textDocument/documentHighlight': function('<SID>SkipYamlRequests'),
-		\   'textDocument/completion': function('<SID>SkipYamlRequests'),
-		\ },
-		\ 'notifications': {
-		\   '$/analyzerStatus': function('<SID>HandleStatus'),
-		\ },
-		\ }
+				\ 'command': 'dart /opt/dart-sdk/bin/snapshots/analysis_server.dart.snapshot --lsp',
+				\ 'message_hooks': {
+				\   'initialize': {
+				\     'initializationOptions': {
+				\       'onlyAnalyzeProjectsWithOpenFiles': v:true
+				\     },
+				\   },
+				\   'textDocument/documentHighlight': function('<SID>SkipYamlRequests'),
+				\   'textDocument/completion': function('<SID>SkipYamlRequests'),
+				\ },
+				\ 'notifications': {
+				\   '$/analyzerStatus': function('<SID>HandleStatus'),
+				\ },
+				\ }
 endif
 
 if dein#tap('echodoc.vim')

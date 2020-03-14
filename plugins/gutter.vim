@@ -7,7 +7,7 @@ if dein#tap('vim-gitgutter')
 	let g:gitgutter_use_location_list = 1
 
 	function! GitStatus()
-	 	let [a,m,r] = GitGutterGetHunkSummary()
+		let [a,m,r] = GitGutterGetHunkSummary()
 		return printf('+%d ~%d -%d', a, m, r)
 	endfunction
 
@@ -21,7 +21,7 @@ if dein#tap('vim-gitgutter')
 			let line = getline(lnum)
 			let line = substitute(line, '\s\+$', '', '') " clean up the text, e.g.:
 			call setline(lnum, line)
-  	endfor
+		endfor
 	endfunction
 
 	function! GlobalChangedLines(ex_cmd)
@@ -42,14 +42,14 @@ if dein#tap('vim-gitgutter')
 			GitGutterNextHunk
 		endif
 	endfunction
-	
+
 	function! NextHunkAllBuffers()
 		let line = line('.')
 		GitGutterNextHunk
 		if line('.') != line
 			return
 		endif
-	
+
 		let bufnr = bufnr('')
 		while 1
 			bnext
@@ -63,7 +63,7 @@ if dein#tap('vim-gitgutter')
 			endif
 		endwhile
 	endfunction
-	
+
 	function! PrevHunkAllBuffers()
 		let line = line('.')
 		GitGutterPrevHunk
