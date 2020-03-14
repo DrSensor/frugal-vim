@@ -9,6 +9,7 @@ set linebreak cursorline		" Stop wrapping lines in the middle of word and Highli
 set splitbelow splitright 	" change :split or :vsplit to add window at Below or Right
 set number relativenumber 	" use both Relative and Exact line number
 set numberwidth=2
+let g:netrw_home='~/.cache/vim'
 
 " Plugin Manager {{{
 " ------------------
