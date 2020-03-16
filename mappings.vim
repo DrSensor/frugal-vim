@@ -38,4 +38,9 @@ if dein#tap('vim-lsc')
 				\ }
 endif
 
+map <F7> gg=G<C-o><C-o>
+if dein#tap('neoformat')
+	map <A-F7> :Neoformat<CR>
+endif
+
 " vim: set foldmethod=indent ts=2 sw=2 tw=80 noet :
