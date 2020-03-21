@@ -28,9 +28,18 @@ if dein#tap('vim-gitgutter')
 	nmap <silent> [h :call PrevHunkAllBuffers()<CR>
 endif
 
+if dein#tap('skim.vim')
+	nmap <C-p>          :Files<CR>
+	nmap <Leader><Tab>  :Windows<CR>
+	nmap <C-f>          :Rg<CR>
+	nmap <Leader>f      :Lines<CR>
+endif
+
 if dein#tap('vim-lsc')
 	let g:lsc_auto_map = {
 				\ 'defaults': v:true,
+				\ 'NextReference': '<C-j>',
+				\ 'PreviousReference': '<C-k>',
 				\ 'GoToDefinition': 'gd',
 				\ 'GoToDefinitionSplit': 'gD',
 				\ 'Rename': '<F2>',
