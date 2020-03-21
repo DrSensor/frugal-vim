@@ -1,5 +1,4 @@
 if dein#tap('vim-lsc')
-	set completeopt=menu,menuone,noinsert,noselect
 	autocmd CompleteDone * silent! pclose
 
 	" https://github.com/natebosch/vim-lsc/wiki/Language-Servers
@@ -7,7 +6,7 @@ if dein#tap('vim-lsc')
 	let g:lsc_server_commands = {
 				\ 'rust': 'rls',
 				\ 'python': 'pyls',
-				\ 'typescript': 'tsserver',
+				\ 'typescript': 'typescript-language-server --stdio',
 				\ 'javascript': 'typescript-language-server --stdio',
 				\ 'html': 'html-languageserver --stdio',
 				\ 'css': 'css-languageserver --stdio',
@@ -61,7 +60,6 @@ if dein#tap('vim-lsc')
 endif
 
 if dein#tap('echodoc.vim')
-	set noshowmode
 	let g:echodoc#enable_at_startup = 1
 endif
 

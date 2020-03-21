@@ -45,6 +45,11 @@ if dein#tap('vim-lsc')
 				\ 'Rename': '<F2>',
 				\ 'FindCodeActions': '<F5>',
 				\ }
+
+	if dein#tap('VimCompletesMe')
+		let g:lsc_auto_map.Completion = 'omnifunc'
+		autocmd FileType * let b:vcm_tab_complete = "omni"
+	endif
 endif
 
 map <F7> gg=G<C-o><C-o>
