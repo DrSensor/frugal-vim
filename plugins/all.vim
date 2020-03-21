@@ -29,6 +29,14 @@ if dein#tap('context.vim')
 	let g:context_border_char = '─'
 endif
 
+if dein#tap('vim-hexokinase')
+	let g:Hexokinase_highlighters = ['backgroundfull']
+	let g:Hexokinase_ftEnabled = [
+				\ 'css', 'html', 'javascript', 'typescript',
+				\ 'dart', 'vim',
+				\ ]
+endif
+
 source ~/.vim/plugins/lightline.vim
 source ~/.vim/plugins/gutter.vim
 source ~/.vim/plugins/language.vim

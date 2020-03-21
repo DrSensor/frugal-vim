@@ -36,6 +36,9 @@ if dein#load_state(s:dein_root)
 	call dein#add('liuchengxu/vista.vim')
 	call dein#add('editorconfig/editorconfig-vim')
 
+	if executable('go')
+		call dein#add('rrethy/vim-hexokinase', { 'build': 'make hexokinase' })
+	endif
 	call dein#add('itchyny/vim-cursorword')
 	call dein#add('easymotion/vim-easymotion')
 	call dein#add('tpope/vim-commentary')
