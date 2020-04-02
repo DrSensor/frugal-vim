@@ -13,4 +13,8 @@ if dein#tap('vim-gitgutter')
 	highlight link GitGutterChangeLineNr Underlined
 endif
 
+if dein#tap('vim-lsc') " :help lsc-configure-highlight
+	highlight lscDiagnosticHint guibg=SteelBlue ctermbg=67
+endif
+
 " vim: set foldmethod=syntax ts=2 sw=2 tw=80 noet :
