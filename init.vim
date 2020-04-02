@@ -1,9 +1,7 @@
 unlet! skip_defaults_vim
 source $VIMRUNTIME/defaults.vim
 
-if filereadable('.vim/.vault.vim')
-	source .vim/.vault.vim		" Special secure config
-endif
+runtime .vault.vim					" Special secure config
 
 set linebreak cursorline		" Stop wrapping lines in the middle of word and Highlight current line
 set splitbelow splitright		" change :split or :vsplit to add window at Below or Right
