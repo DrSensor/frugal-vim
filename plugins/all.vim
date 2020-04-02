@@ -1,3 +1,7 @@
+if dein#tap('skim.vim')
+	let $SKIM_DEFAULT_COMMAND = "git ls-tree -r --name-only HEAD || rg --files || ag -l -g \"\" || find ."
+endif
+
 if dein#tap('base16-vim')
 	let base16colorspace=256
 	if filereadable(expand("~/.vimrc_background"))

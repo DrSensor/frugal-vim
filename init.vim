@@ -23,6 +23,7 @@ if dein#load_state(s:dein_root)
 
 	"Productivity {{{"
 	call dein#add('lotabout/skim.vim')
+	call dein#add('mcchrish/nnn.vim')
 	call dein#add('whiteinge/diffconflicts')
 	call dein#add('wellle/context.vim')
 	call dein#add('rhysd/git-messenger.vim')
