@@ -4,7 +4,14 @@ if dein#tap('vim-lsc')
 	" https://github.com/natebosch/vim-lsc/wiki/Language-Servers
 	" and all of them installed via `yay` except vim
 	let g:lsc_server_commands = {
-				\ 'rust': 'rls',
+				\ 'rust': {
+				\ 	'command': 'rls',
+				\ 	'log_level': 'Warning',
+				\ 	'suppress_stderr': v:true,
+				\ 	'workspace_config': {
+				\ 		'clippy_preference': 'on',
+				\ 	},
+				\  },
 				\ 'python': 'pyls',
 				\ 'typescript': 'typescript-language-server --stdio',
 				\ 'javascript': 'typescript-language-server --stdio',
@@ -21,7 +28,7 @@ if dein#tap('vim-lsc')
 				\ },
 				\ 'go': {
 				\		'command': 'gopls serve',
-				\		'log_level': -1,
+				\		'log_level': 'Warning',
 				\		'suppress_stderr': v:true,
 				\ },
 				\ }
@@ -61,13 +68,17 @@ endif
 
 if dein#tap('echodoc.vim')
 	let g:echodoc#enable_at_startup = 1
+	let g:echodoc#type = 'popup'
+	" To use a custom highlight for the popup window,
+	" change Pmenu to your highlight group
+	highlight link EchoDocPopup Pmenu
 endif
 
 if dein#tap('neoformat')
 	let g:neoformat_try_formatprg = 1
 	let g:neoformat_basic_format_align = 1	" Enable alignment
 	let g:neoformat_basic_format_retab = 1	" Enable tab to spaces conversion
-	let g:neoformat_basic_format_trim = 1	" Enable trimmming of trailing whitespace
+	let g:neoformat_basic_format_trim = 1		" Enable trimmming of trailing whitespace
 
 	" augroup fmt " Autoformat on save
 	"		autocmd!

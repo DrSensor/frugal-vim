@@ -1,5 +1,6 @@
 highlight LineNr				ctermbg=NONE guibg=NONE guifg=YellowGreen
 highlight CursorLineNr	cterm=bold
+highlight CursorLine		ctermbg=Black guibg=#262626
 
 if dein#tap('vim-gitgutter')
 	"let g:gitgutter_highlight_lines = 1

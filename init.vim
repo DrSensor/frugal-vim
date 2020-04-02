@@ -1,5 +1,7 @@
 unlet! skip_defaults_vim
-source $VIMRUNTIME/defaults.vim
+if !has('nvim')
+	source $VIMRUNTIME/defaults.vim
+endif
 
 runtime .vault.vim					" Special secure config
 
@@ -26,10 +28,13 @@ if dein#load_state(s:dein_root)
 	call dein#add('mcchrish/nnn.vim')
 	call dein#add('whiteinge/diffconflicts')
 	call dein#add('wellle/context.vim')
+	" call dein#add('mg979/vim-visual-multi')
 	call dein#add('rhysd/git-messenger.vim')
 
 	call dein#add('Shougo/echodoc.vim')
 	call dein#add('sbdchd/neoformat')
+	" call dein#add('dradtke/vim-dap')
+	call dein#add('puremourning/vimspector')
 	call dein#add('natebosch/vim-lsc')
 	call dein#add('ajh17/VimCompletesMe')
 	call dein#add('liuchengxu/vista.vim')
@@ -53,7 +58,6 @@ if dein#load_state(s:dein_root)
 	"--------}}}
 
 	"Asthetics {{{"
-	call dein#add('auxiliary/vim-layout')
 	call dein#add('nathanaelkane/vim-indent-guides')
 	call dein#add('itchyny/lightline.vim')
 	call dein#add('itchyny/vim-gitbranch')

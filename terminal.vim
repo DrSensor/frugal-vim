@@ -1,7 +1,7 @@
 set errorbells						" Trigger bell on error
 
 set mouse=nv							" Disable mouse in command-line mode
-if has('mouse')
+if has('mouse') && !has('nvim')
 	if has('mouse_sgr')
 		set ttymouse=sgr
 	else
